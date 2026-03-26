@@ -27,4 +27,11 @@ public class AgendamentoService {
         return agendamentoRepository.save(agendamento);
 
     }
+
+    public void deletarAgendamento (LocalDateTime dataHoraAgendamento, String cliente){
+
+        agendamentoRepository.deleteByDataHoraAgendamentoAndCliente(dataHoraAgendamento, cliente);
+
+    }
+
 }
